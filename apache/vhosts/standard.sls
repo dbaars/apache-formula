@@ -27,13 +27,11 @@ include:
   file.directory:
     - unless: test -d {{ documentroot }}
     - name: {{ documentroot }}
+    - user: apache
+    - group: apache
     - makedirs: True
     - allow_symlink: True
-  acl.present:
-    - acl_type: user
-    - acl_name: jenkins
-    - perms: rwx
-    - recurse: True
+	
 {% endif %}
 
 {% if grains.os_family == 'Debian' %}
