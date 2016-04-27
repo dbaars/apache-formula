@@ -27,6 +27,8 @@ include:
   file.directory:
     - unless: test -d {{ documentroot }}
     - name: {{ documentroot }}
+    - user: apache
+    - group: apache
     - makedirs: True
     - allow_symlink: True
 
