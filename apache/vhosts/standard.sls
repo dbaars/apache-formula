@@ -31,6 +31,11 @@ include:
     - group: apache
     - makedirs: True
     - allow_symlink: True
+  acl.present:
+    - acl_type: user
+    - acl_name: jenkins
+    - perms: rwx
+    - recurse: True
 
 {% endif %}
 
