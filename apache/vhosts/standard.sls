@@ -32,6 +32,7 @@ include:
     - makedirs: True
     - allow_symlink: True
   acl.present:
+    - name: {{ documentroot }}
     - acl_type: user
     - acl_name: jenkins
     - perms: rwx
