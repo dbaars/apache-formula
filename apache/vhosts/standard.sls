@@ -29,7 +29,7 @@ include:
     - name: {{ documentroot }}
     - makedirs: True
     - allow_symlink: True
-	
+
 {% endif %}
 
 {% if grains.os_family == 'Debian' %}
