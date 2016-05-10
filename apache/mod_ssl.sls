@@ -19,9 +19,9 @@ a2enmod mod_ssl:
 
 mod_ssl:
   pkg.installed: []
-    - require:
-      - pkg: apache
-    - watch_in:
-      - module: apache-restart
+  require:
+    - pkg: apache
+  watch_in:
+    - module: apache-restart
 
 {% endif %}
